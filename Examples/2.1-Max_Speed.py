@@ -55,4 +55,5 @@ def max_speed():
     Vm = np.roots([a, b, c, d]) * 3.6
     V = [root.real for root in Vm if np.isclose(root.imag, 0)]
     return round(abs(V[0]),2)
+
 print(f"\nThe max speed achievable with available power ({Pavail/1000}kW) is : {max_speed()} km/h")
